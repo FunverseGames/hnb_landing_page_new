@@ -11,10 +11,6 @@
 </head>
 
 <body>
-    <a class="up" href="#middle-image">
-        <img src="images/icon/up.png" alt="">
-        <span>Yukarı Çık</span>
-    </a>
     <header>
         <a data-aos="fade-up" href="index.html" class="brand"><img src="images/hitandboom.png" alt="Hit And Boom"></a>
         <div class="menu-btn"></div>
@@ -72,25 +68,52 @@
                 yazdırabilirsiniz.
             </p>
             <br><br>
-            <p data-aos="fade-up">
-                Oyun tarzınıza bağlı olarak Boombot’unuzu seçebilir, silahlarınızı donanarak savaş arenasına
-                dalabilirsiniz. MOBA Battle Royale türündeki Hit and Boom’da haritadaki tarafsız düşmanları yok
-                etmek ve
-                Boombot’larınızı çeşitli güçlendiricilerle yükseltmek için ekibinizle birlikte hareket etmelisiniz.
-                Dev
-                Titan'ı yenerek gücünü emebilir, tüm rakiplerinizi yok edebilir ve adınızı altın harflerle
-                yazdırabilirsiniz. Oyun tarzınıza bağlı olarak Boombot’unuzu seçebilir, silahlarınızı donanarak
-                savaş
-                arenasına dalabilirsiniz. Oyun tarzınıza bağlı olarak Boombot’unuzu seçebilir, silahlarınızı
-                donanarak
-                savaş arenasına dalabilirsiniz. MOBA Battle Royale türündeki Hit and Boom’da haritadaki tarafsız
-                düşmanları yok etmek ve Boombot’larınızı çeşitli güçlendiricilerle yükseltmek için ekibinizle
-                birlikte
-                hareket etmelisiniz. Dev Titan'ı yenerek gücünü emebilir, tüm rakiplerinizi yok edebilir ve adınızı
-                altın harflerle yazdırabilirsiniz. Oyun tarzınıza bağlı olarak Boombot’unuzu seçebilir,
-                silahlarınızı
-                donanarak savaş arenasına dalabilirsiniz.
-            </p>
+            <h1 data-aos="fade-up">Silahlar</h1>
+            <div data-aos="fade-up" class="wep-area">
+                <div class="wep wepbtn-1">
+                    <img src="images/ornek-wep.webp" alt="">
+                </div>
+                <div class="wep wepbtn-2">
+                    <img src="images/ornek-wep.webp" alt="">
+                </div>
+                <div class="wep wepbtn-3">
+                    <img src="images/ornek-wep.webp" alt="">
+                </div>
+
+            </div>
+            <div id="wep-1" class="wep-text wep-1 wep-disable">
+                <span>
+                    1.
+                    Oyun tarzınıza bağlı olarak Boombot’unuzu seçebilir, silahlarınızı donanarak savaş arenasına
+                    dalabilirsiniz. MOBA Battle Royale türündeki Hit and Boom’da haritadaki tarafsız düşmanları yok
+                    etmek ve
+                    Boombot’larınızı çeşitli güçlendiricilerle yükseltmek için ekibinizle birlikte hareket etmelisiniz.
+                    Dev
+                    Titan'ı yenerek gücün
+                </span>
+            </div>
+            <div id="wep-2" class="wep-text wep-2 wep-disable">
+                <span>
+                    2.
+                    Oyun tarzınıza bağlı olarak Boombot’unuzu seçebilir, silahlarınızı donanarak savaş arenasına
+                    dalabilirsiniz. MOBA Battle Royale türündeki Hit and Boom’da haritadaki tarafsız düşmanları yok
+                    etmek ve
+                    Boombot’larınızı çeşitli güçlendiricilerle yükseltmek için ekibinizle birlikte hareket etmelisiniz.
+                    Dev
+                    Titan'ı yenerek gücün
+                </span>
+            </div>
+            <div id="wep-3" class="wep-text wep-3 wep-disable">
+                <span>
+                    3.
+                    Oyun tarzınıza bağlı olarak Boombot’unuzu seçebilir, silahlarınızı donanarak savaş arenasına
+                    dalabilirsiniz. MOBA Battle Royale türündeki Hit and Boom’da haritadaki tarafsız düşmanları yok
+                    etmek ve
+                    Boombot’larınızı çeşitli güçlendiricilerle yükseltmek için ekibinizle birlikte hareket etmelisiniz.
+                    Dev
+                    Titan'ı yenerek gücün
+                </span>
+            </div>
         </div>
         <div data-aos="fade-up" class="area-2-blog">
             <a href="#">
@@ -146,7 +169,13 @@
     </div>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init();
+        AOS.init({
+            once: true,
+            easing: 'ease-in-out'
+        });
+
+
+
     </script>
     <script src="js/main.js"></script>
 </body>

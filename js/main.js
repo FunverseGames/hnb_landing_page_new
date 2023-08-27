@@ -1,3 +1,4 @@
+
 const menuBtn = document.querySelector(".menu-btn");
 const navigation = document.querySelector(".navigation");
 menuBtn.addEventListener("click", () => {
@@ -24,15 +25,26 @@ function menu() {
     }
 }
 
-const container = document.querySelector('.container');
-const header = document.querySelector('header');
-const up = document.querySelector('.up');
-document.addEventListener('scroll', () => {
-    if (document.scrollingElement.scrollTop >= 1) {
-        header.style.display = 'none';
-        up.style.display = 'block';
-    } else {
-        header.style.display = 'flex';
-        up.style.display = 'none';
-    }
+const wepBtn1 = document.querySelector(".wepbtn-1");
+const wepBtn2 = document.querySelector(".wepbtn-2");
+const wepBtn3 = document.querySelector(".wepbtn-3");
+const wepText1 = document.querySelector(".wep-1");
+const wepText2 = document.querySelector(".wep-2");
+const wepText3 = document.querySelector(".wep-3");
+wepBtn1.addEventListener("click", () => {
+    wepText1.classList.toggle("wep-active");
+    wepText2.classList.remove("wep-active");
+    wepText3.classList.remove("wep-active");
+});
+
+wepBtn2.addEventListener("click", () => {
+    wepText1.classList.remove("wep-active");
+    wepText2.classList.toggle("wep-active");
+    wepText3.classList.remove("wep-active");
+});
+
+wepBtn3.addEventListener("click", () => {
+    wepText1.classList.remove("wep-active");
+    wepText2.classList.remove("wep-active");
+    wepText3.classList.toggle("wep-active");
 });

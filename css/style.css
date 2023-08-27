@@ -90,7 +90,7 @@ section {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    background: url("../public/images/background.jpg");
+    background: url("../images/background.jpg");
     background-size: cover;
     background-position: center;
     scroll-snap-align: start;
@@ -111,6 +111,19 @@ section {
     gap: 1rem;
     margin-bottom: 1.25rem;
 }
+
+.blog-img-fix{
+    width: 307px;
+    height: 154px;
+}
+
+
+.karakter-img-fix{
+    width: 307px;
+    height: 200px;
+    object-fit: cover;
+}
+
 
 .blog-img {
     max-width: 146px;
@@ -149,6 +162,7 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 1rem;
 }
 
 .media-icons a:hover {
@@ -158,7 +172,7 @@ section {
 .game {
     color: #fff;
     position: absolute;
-    bottom: 5rem;
+    bottom: 6rem;
     display: flex;
     align-self: center;
     margin-right: 1rem;
@@ -205,7 +219,7 @@ section {
 
 .area-1-img {
     flex: 90;
-    background: linear-gradient(180deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 20%),linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 20%),url("../public/images/area-1.png");
+    background: linear-gradient(180deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 20%),linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 20%),url("../images/area-1.png");
     background-size: cover;
     background-position: center;
     display: flex;
@@ -394,6 +408,16 @@ section {
     scroll-snap-align: start;
 }
 
+.footer-detay {
+    width: 100%;
+    height: 30vh;
+    padding: 70px 200px;
+    background: #000;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+}
+
 .footer-text {
     display: flex;
     flex-direction: column;
@@ -449,7 +473,7 @@ section {
     min-height: 45vh;
     background-image:
         linear-gradient(to bottom, rgba(0, 0, 0, 0.52), rgba(0, 0, 0, 0.73)),
-        url('../public/images/haberler.png');
+        url('../images/haberler.png');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -485,6 +509,14 @@ section {
 
 }
 
+.karakter-area {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    padding-top: 10px;
+}   
+
 .blog-card {
     flex: 1;
     object-fit: cover;
@@ -511,6 +543,12 @@ section {
 
 .blog-area a:hover .card-text h2,
 .blog-area a:hover .card-text span {
+    color: #EFB35A;
+    transition: 0.3s ease;
+}
+
+.karakter-area a:hover .card-text h2,
+.karakter-area a:hover .card-text span {
     color: #EFB35A;
     transition: 0.3s ease;
 }
@@ -561,7 +599,6 @@ section {
     width: 100%;
     height: 50vh;
     background: #000;
-    scroll-snap-align: start;
 }
 
 .blog-page-header img {
@@ -578,7 +615,6 @@ section {
     padding: 100px 200px 20px 200px;
     display: flex;
     justify-content: center;
-    scroll-snap-align: start;
 }
 
 .blog-page-text {
@@ -631,7 +667,7 @@ section {
     min-height: 45vh;
     background-image:
         linear-gradient(to top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)),
-        url("../public/images/kayit-ol.png");
+        url("../images/kayit-ol.png");
     background-size: cover;
     background-position: center;
     display: flex;
@@ -834,10 +870,126 @@ input[type="checkbox"]:checked + label:before {
 }
 
 
+.karakter-section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    scroll-snap-align: start;
+}
+
+.karakter-header {
+    width: 100%;
+    min-height: 45vh;
+    background-image:
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.52), rgba(0, 0, 0, 0.73)),
+        url('../images/haberler.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    padding: 0px 200px;
+    position: relative;
+
+}
+
+.karakter-header .media-icons {
+    position: absolute;
+    bottom: -3.85rem;
+
+}
+
+.karakter-blog {
+    width: 100%;
+    min-height: 55vh;
+    background: #0D0D0D;
+    padding: 10px 200px;
+}
+
+.karakter-blog h1 {
+    text-align: center;
+    color: #EFB35A;
+    padding-right:10px;
+    font-size: 3rem;
+}
+
+.karakter-blog .card-text h2{
+    font-size: 1.8rem;
+}
+
+.wep-area{
+    margin: 20px 0px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.wep{
+    margin-right: 25px;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.wep-text span{
+    font-weight: lighter;
+    font-size: 1.25rem;
+}
+
+.wep img{
+    width: 100px;
+    height: 100px;
+}
+
+.wep-disable{
+    visibility: hidden;
+    opacity: 0;
+    max-height: 0px;
+}
+
+
+.wep-text{
+    transition: all .3s ease;
+}
+
+.wep-active{
+    visibility: visible;
+    opacity: 1;
+    max-height:500px;
+}
+
+.blog-list{
+    display: flex;
+    color: #fff;
+    align-items: center;
+    gap: 2rem;
+}
+
+.blog-list input{
+    background: none;
+    border:none;
+    color: #fff;
+    font-size: 1.5rem;
+    margin: 0 .5rem;
+    cursor: pointer;
+}
+
+.blog-list input:hover{
+    color: #EFB35A;
+}
+
+.list-active{
+    color: #EFB35A!important;
+}
+
+
 @media (max-width:1808px) {
     .blog-area {
         justify-content: center;
     }
+
 
     .haber-blog h1 {
         text-align: center;
@@ -847,8 +999,16 @@ input[type="checkbox"]:checked + label:before {
         padding: 50px 200px;
     }
 
-    .pagination {
+    .karakter-blog h1 {
+        text-align: center;
+        padding: 0;
+    }
 
+    .karakter-blog {
+        padding: 50px 200px;
+    }
+
+    .pagination {
         margin-right: 0;
     }
 
@@ -868,6 +1028,11 @@ input[type="checkbox"]:checked + label:before {
     }
 
     .haber-blog {
+        padding: 100px 200px;
+    }
+
+    
+    .karakter-blog {
         padding: 100px 200px;
     }
 
@@ -903,6 +1068,9 @@ input[type="checkbox"]:checked + label:before {
     }
 
     .footer {
+        padding: 70px 20px;
+    }
+    .footer-detay {
         padding: 70px 20px;
     }
 
@@ -1019,7 +1187,7 @@ input[type="checkbox"]:checked + label:before {
     }
 
     .menu-btn {
-        background: url("../public/images/icon/menu.png")no-repeat;
+        background: url("../images/icon/menu.png")no-repeat;
         background-size: 30px;
         background-position: center;
         width: 40px;
@@ -1030,7 +1198,7 @@ input[type="checkbox"]:checked + label:before {
 
     .menu-btn.active {
         z-index: 999;
-        background: url("../public/images/icon/close.png")no-repeat;
+        background: url("../images/icon/close.png")no-repeat;
         background-size: 25px;
         background-position: center;
         transition: 0.3s ease;
@@ -1066,6 +1234,7 @@ input[type="checkbox"]:checked + label:before {
     .responsive-menu{
         display: block;
     }
+
 }
 
 @media (max-width: 1024px) {
@@ -1110,8 +1279,21 @@ input[type="checkbox"]:checked + label:before {
         flex-direction: column;
     }
 
+    .footer-detay {
+        height: auto;
+        align-items: center;
+        gap: 1.125rem;
+        flex-direction: column;
+    }
+
     .blog-page-section {
         padding: 150px 20px 20px 20px;
+    }
+    .blog-list{
+        flex-direction: column;
+    }
+    .game{
+        margin-bottom:5rem;
     }
 }
 
@@ -1125,6 +1307,7 @@ input[type="checkbox"]:checked + label:before {
     .area-1-text h1 {
         font-size: 3rem;
     }
+
 }
 
 @media (max-width: 768px) {
@@ -1177,6 +1360,19 @@ input[type="checkbox"]:checked + label:before {
     }
 
     .haber-header .media-icons {
+        position: initial;
+    }
+
+    .karakter-header {
+        padding: 0;
+        justify-content: center;
+    }
+
+    .karakter-blog {
+        padding: 0;
+    }
+
+    .karakter-header .media-icons {
         position: initial;
     }
 
@@ -1241,5 +1437,29 @@ input[type="checkbox"]:checked + label:before {
     }
     .kayit-header h1 {
         font-size:2.5rem;
+    }
+}
+
+@media screen and (min-resolution: 120dpi) { 
+
+    :root{
+        overflow-y: initial;
+        scroll-snap-type: none;
+    }
+    .middle-image{
+        top: 7rem;
+    }
+    .middle-image .detay-img{
+        width: 500px;
+        height: 300px;
+    }
+    .area-2-header h1{
+        font-size: 2.125rem;
+    }
+    .area-2-img img{
+        width: 70%;
+    }
+    .area-2-blog{
+        margin-top: 15rem;
     }
 }
