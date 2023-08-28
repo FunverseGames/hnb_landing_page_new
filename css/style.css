@@ -760,7 +760,31 @@ input[type="checkbox"]:checked + label:before {
     font-weight: lighter;
 }
 
+.form-feedback {
+    display: none;
+    padding: 20px;
+    background-color: #f44336;
+    color: white;
+  }
+  
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+.closebtn:hover {
+    color: black;
+  }
+  
+
 .kayit-btn{
+    cursor: pointer;
     padding: 5px 10px;
     border: 2px solid #EFB35A;
     width: 130px;
@@ -770,7 +794,7 @@ input[type="checkbox"]:checked + label:before {
     color: #000;
     background-color: #fff;
     font-size: 1.25rem;
-    margin: 40px auto;
+    margin: 10px auto;
     display: flex;
     align-items: center;
     justify-content: center;

@@ -46,7 +46,7 @@
             <h1 data-aos="fade-up">HIT AND BOOM ARENASINA KATIL!</h1>
         </div>
         <div class="kayit-form">
-            <div class="email-input">
+            <form action="" id="registerForm" class="email-input">
                 <input data-aos="fade-up" class="email" autofocus id="email" name="email" placeholder="E-Postanızı girin" type="email"
                     required>
                 <div data-aos="fade-up" class="input-box">
@@ -60,7 +60,11 @@
                             Politikası</a>'na uygun olarak işleneceğini kabul ve beyan
                         ediyorum.</label>
                 </div>
-                <a data-aos="fade-up" href="#" class="kayit-btn">BAŞLA</a>
+                <button type="submit" data-aos="fade-up" class="kayit-btn">BAŞLA</button>
+                <div id="form-feedback" data-state="idle" class="form-feedback">
+                    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+                    <p id="form-feedback-message"></p>
+                </div>
                 <a data-aos="fade-up" class="steam-hover" href="#">
                     <div class="kayit-steam-btn">
                         <div class="steam-logo">
@@ -72,7 +76,7 @@
                         </div>
                     </div>
                 </a>
-            </div>
+            </form>
         </div>
 
     </div>
@@ -104,6 +108,7 @@
         AOS.init();
     </script>
     <script src="js/main.js"></script>
+    <script defer src="js/registerForm.js"></script>
 </body>
 
 </html>
