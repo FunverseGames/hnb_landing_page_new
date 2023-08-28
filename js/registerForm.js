@@ -10,6 +10,8 @@ registerForm.addEventListener("submit", async (e) => {
 
     let formFeedback = document.getElementById("form-feedback")
     let formFeedbackMessage = document.getElementById("form-feedback-message")
+    let loader = document.getElementById("loader")
+    let submitButton = document.getElementById("submit-button")
 
     //resetting form state
     formFeedback.style.display = "none";
@@ -17,10 +19,6 @@ registerForm.addEventListener("submit", async (e) => {
 
 
     const validEmailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-    console.log(email);
-    console.log(acceptReceive);
-    console.log(acceptPolicy);
 
     if (!email || email === "") {
         formFeedback.style.display = "block";
@@ -51,20 +49,29 @@ registerForm.addEventListener("submit", async (e) => {
     }
 
     const url = "https://hitandboom.com/api/register"
-    console.log(payload);
-    console.log(JSON.stringify(payload));
-
+    loader.style.display = "block"
+    formFeedback.style.display = "none";
+    submitButton.style.display = "none"
     const response = await fetch(url, {
         method: "POST", // *GET, POST, PUT, DELETE, etc.
+        //mode: "no-cors", // no-cors, *cors, same-origin
         headers: {
             "Content-Type": "application/json",
         },
         body: JSON.stringify(payload), // body data type must match "Content-Type" header
     });
-    console.log(response)
 
     const result = await response.json();
 
-    console.log(result);
-   
+    if (result.message) {
+        loader.style.display = "none"
+        submitButton.style.display = "block"
+        formFeedback.style.display = "block";
+        formFeedbackMessage.innerText = result.message;
+        if(response.status===201){
+            formFeedback.style.backgroundColor="#16a34a"
+        }
+        return;
+    }
+
 });

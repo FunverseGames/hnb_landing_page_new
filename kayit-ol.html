@@ -7,6 +7,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js"></script>
     <title>Hit and Boom</title>
 </head>
 
@@ -60,8 +61,9 @@
                             Politikası</a>'na uygun olarak işleneceğini kabul ve beyan
                         ediyorum.</label>
                 </div>
-                <button type="submit" data-aos="fade-up" class="kayit-btn">BAŞLA</button>
-                <div id="form-feedback" data-state="idle" class="form-feedback">
+                <button id="submit-button" type="submit" data-aos="fade-up" class="kayit-btn">BAŞLA</button>
+                <div id="loader" class="loader"></div>
+                <div id="form-feedback" class="form-feedback">
                     <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
                     <p id="form-feedback-message"></p>
                 </div>
