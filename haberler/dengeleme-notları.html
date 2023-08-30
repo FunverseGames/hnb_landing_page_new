@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <title>Hit and Boom</title>
+</head>
+
+<body>
+    <a class="up" href="#middle-image">
+        <img src="../images/icon/up.png" alt="">
+        <span>Yukarı Çık</span>
+    </a>
+    <header>
+        <a data-aos="fade-up" href="../index.html" class="brand"><img src="../../images/hitandboom.png"
+                alt="Hit And Boom"></a>
+        <div class="menu-btn"></div>
+        <div class="navigation">
+            <div data-aos="fade-up" class="navigation-items">
+                <a href="../index.html#oyun">Oyun</a>
+                <a href="../karakterler.html">Karakterler</a>
+                <a href="index.html">Haberler</a>
+                <a class="color-main" href="../kayit-ol.html">Kayıt Ol</a>
+                <a class="dropdown" onclick="menu()" href="#">TR <i class="menu-icon bi bi-chevron-down"></i></a>
+                <ul class="responsive-menu">
+                    <li>TR</li>
+                    <li>EN</li>
+                </ul>
+                <a href="../kayit-ol.html" class="border-btn">HEMEN OYNA</a>
+            </div>
+            <div class="lang-menu menu-disabled">
+                <ul>
+                    <li>TR</li>
+                    <li>EN</li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <div id="middle-image" class="middle-image">
+
+        <div data-aos="fade-up" class="blog-page-icons">
+            <a target="_blank" href="https://www.instagram.com/hitandboom/"><img src="../images/icon/instagram.png"
+                    alt="Hit And Boom Instagram"></a>
+            <a target="_blank" href="https://www.facebook.com/hitandboom/"><img src="../images/icon/facebook.png"
+                    alt="Hit And Boom Facebook"></i></a>
+            <a target="_blank" href="https://www.youtube.com/@funversegames"><img src="../images/icon/youtube.png"
+                    alt="Hit And Boom Youtube"></i></a>
+            <a target="_blank" href="https://mobile.twitter.com/hitandboom"><img src="../images/icon/twitter.png"
+                    alt="Hit And Boom Twitter"></i></a>
+        </div>
+
+        <img data-aos="fade-up" class="detay-img" src="../images/haberler/default-thumbnail.webp" alt="">
+        <div data-aos="fade-up" class="card-text">
+            <span>4 Ağustos 2023</span>
+            <h2>Dengeleme Notları</h2>
+        </div>
+    </div>
+
+    <div class="blog-page-header">
+        <img src="../images/haberler/default-thumbnail.webp" alt="">
+    </div>
+
+    <div class="blog-page-section">
+        <div class="blog-page-text">
+            <p data-aos="fade-up">
+                <h1>MOB VE EŞYA DEĞERLERİ</h1>
+                Yeni güncellemede mobların yeniden doğuş sistemi ve Titan’ın Hazinesi (verdiğiniz hasara göre altın
+                kazanabileceksiniz) eklendiği için fiyatlarda da güncellemeye gidildi. Öncelikle hesaplama kolaylığı
+                sağlaması için tüm mobların kazandırdığı altın değeri 10 katına çıkarıldı. Aynı şekilde tüm eşyaların da
+                satın alma değerleri 20 katına çıkarıldı. Bunun dışında can puanı kazandıran eşyaların fiyatı azaltıldı.
+                Hasar ve hareket hızı eşyalarının fiyatı ise arttırıldı.
+                <h1>KİLİTLİ SİLAHLAR</h1>
+                Spray ve Slime silahları çözülmesi gereken hatalardan dolayı bu hafta kilitli kalacak.
+                <h1>GENEL DENGELEME</h1>
+                Tüm karakterlerin hareket hızı değerleri bir önceki değerlerine geri döndürüldü. Hızlı bir oyun yapısı
+                istiyoruz fakat kontrol edilemez olmasından da kaçınmak istiyoruz. Bu yüzden eski hız değerlerimize geri
+                dönüyoruz. Hareket hızı eşyaları ile hala nehirde drift atacak hıza ulaşabilirsiniz.
+                <h1>KARAKTER DENGELEMELERİ</h1>
+                <li>STINGER</li>
+                En dengeli silahlardan biri olmasına rağmen ultimate yeteneğini kullanmak için bir sebep yoktu. Bu
+                yüzden hasar verme sıklığı iki katına çıkarılarak daha ölümcül bir hale getirildi.
+                BUFF: Ultimate Hasar Verme Sıklığı / 0.6 sn -> 0.3 sn.
+                <li>MORTAR</li>
+                Oynarken keyif aldığınızı biliyoruz fakat yetenek setinden dolayı haritada durdurulamaz olması biraz
+                sorun oluşturuyor. “Hoppacık” ve “Ultimate” yeteneklerinde küçük birer oynama yaparak daha dengeli bir
+                oyun ortamı oluşturmayı planlıyoruz.
+                NERF: 2. Silah Yeteneği Dolum Süresi / 9 sn -> 12 sn
+                NERF: Ultimate Hasarı / 750 -> 600
+                <li>SOUNDWAVE</li>
+                Yakın menzilde etkin olduğundan rakipleri ile arasındaki mesafeyi hızlı azaltmasını istiyoruz fakat
+                direkt hareket hızını etkilemektense bunu yeteneği ile yapması onu daha eğlenceli ve daha köpekbalığımsı
+                kılacaktır. Bu yüzden hareket hızı veren yeteneğini artık daha sık kullanabilirsiniz.
+                BUFF: 2. Silah Yeteneği Dolum Süresi / 8 sn -> 6 sn
+                <li>JAWS</li>
+                Tank olarak oynanmasındansa daha çok savaşçı konumunda oynanabilmesi daha önemli. Bu yüzden can çalma
+                yeteneğini daha etkin kullanabilmesini sağlamak önceliğimiz. Fakat güç dengesini korumak için de can
+                puanında azalmaya gidiyoruz.
+                NERF: Can Puanı / 8000 -> 6500
+                BUFF: 1. Silah Yeteneği Hasarı / 450 -> 550
+                BUFF: 1. Silah Yeteneği Dolum Süresi / 8 sn -> 7 sn
+                BUFF: 2. Silah Yeteneği Dolum Süresi / 9 sn -> 6 sn
+                <li>SCYTHE</li>
+                Meta silahımıza küçük bir düzenleme yaparak daha fazla risk daha fazla ödül yapısını getiriyoruz. Can
+                puanının azalması ve hasarının artması ile daha stratejik hamlelerle daha devasa hasarlar
+                verebileceksiniz.
+                NERF: Can Puanı / 6000 -> 5000
+                BUFF: Hareket Hızı / 1 -> 1.05
+                BUFF: Temel Saldırı Hasarı / 425 -> 450
+                BUFF: 2. Silah Yeteneği Dolum Süresi / 11 sn -> 9 sn
+                BUFF: Ultimate Hasarı / 750 -> 800
+                <li>MACE</li>
+                Kırılgan yapısından dolayı yakın menzilde oynamakta çok zorlanıldığı için hız ve hasar konusunda birkaç
+                yükseltme yaptık. Bu sayede hem bireysel hem de takım savaşlarındaki önemi daha da artmış olacak.
+                BUFF: Hareket Hızı / 0.95 -> 1
+                BUFF: Temel Saldırı Hasarı / 475 -> 500
+                BUFF: 2. Silah Yeteneği Dolum Süresi / 10 sn -> 8.5 sn
+                BUFF: Ultimate Hasarı Orta Katman Hasarı / 1.5x -> 2x
+                BUFF: Ultimate Hasarı Dış Katman Hasarı / 2x -> 3x
+                <li>FREEZER</li>
+                Ultimate Yeteneği artık karakteri dokunulmaz yapıyor ve bir miktar can yeniliyor.
+                BUFF: Can Puanı / 10000 -> 11000
+                <li>BLAZER</li>
+                Uzun uzun savaşabilse bile Blazer diğer karakter arasında erken eriyor. Ateş kalkanını daha sık
+                kullanabilmesi savaşlarda daha fazla kalmasını sağlayacaktır.
+                BUFF: 2. Silah Yeteneği Dolum Süresi / 10 sn -> 8 sn
+                <li>CANNON</li>
+                Kullanım zorluğundan dolayı tercih edilmeyen silahlardan biri. Bu zorluk açığını da başarılı oyuncuları
+                daha çok ödüllendirerek kapatmak istiyoruz.
+                BUFF: Hareket Hızı / 0.9 -> 0.95
+                BUFF: 1. Silah Yeteneği Dolum Süresi / 6 sn -> 4.5 sn
+                BUFF: 2. Silah Yeteneği Dolum Süresi / 8 sn -> 7 sn
+                BUFF: Ultimate Hasarı / 1000 -> 1200
+                NERF: Ultimate Dolum Süresi / 35 sn -> 45 sn
+                <li>DRONE GLOVE</li>
+                Yetenekleri güçlü olsa da bekleme süreleri büyük dezavantaj oluşturuyor. Bu yüzden kısa süreli
+                savaşlarda çok fazla verim alamıyor ve savaştan da uzaklaşamıyor. Bu yüzden can ve hız değerlerine biraz
+                ekleme yaparak bu durumu dengelemek istiyoruz.
+                BUFF: Can Puanı / 7500 -> 8000
+                BUFF: Hareket Hızı / 0.75 -> 0.85
+                <li>NUNCHAKU</li>
+                Kitle kontrol etkisi çok yüksek olduğundan takımların vazgeçilmezi oluyor. Diğer destek ve tank
+                karakterlerine bu yüzden çok şans verilmiyor. Orantısız gücünü biraz daha kabul edilebilir düzeylere
+                indirmek için yeteneklerinin bekleme sürelerinde biraz oynama yaptık. Bu sayede hala doğru zamanlama ile
+                aynı etkiyi bırakabilirsiniz.
+                NERF: 1. Silah Yeteneği Dolum Süresi / 6 sn -> 7.5 sn
+                NERF: 2. Silah Yeteneği Dolum Süresi / 7 sn -> 11 sn
+                NERF: Ultimate Dolum Süresi / 35 sn -> 45 sn
+            </p>
+            <br><br>
+
+        </div>
+        <div data-aos="fade-up" class="area-2-blog">
+            <a href="studyo-guncellemesi-agustos.html">
+                <div class="blog-card">
+                    <img class="blog-img-fix"
+                        src="../images/haberler/studyo-guncellemesi-agustos/studyo-guncellemesi-agustos-thumbnail.webp"
+                        alt="">
+                    <div class="card-text">
+                        <span>23 Ağustos 2023</span>
+                        <h2>Stüdyo Güncellemesi(Ağustos)</h2>
+                    </div>
+                </div>
+            </a>
+
+            <a href="dengeleme-notları.html">
+                <div class="blog-card">
+                    <img class="blog-img-fix" src="../images/haberler/default-thumbnail.webp" alt="">
+                    <div class="card-text">
+                        <span>4 Ağustos 2023</span>
+                        <h2>Dengeleme Notları - 04.08.2023</h2>
+                    </div>
+                </div>
+            </a>
+
+            <a href="game-design-dev-blog-with-necati-urkmez.html">
+                <div class="blog-card">
+                    <img class="blog-img-fix" src="../images/haberler/default-thumbnail.webp" alt="">
+                    <div class="card-text">
+                        <span>27 Temmuz 2023</span>
+                        <h2>Game Design Dev Blog with Necati Ürkmez</h2>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="footer-detay">
+        <div class="footer-logo">
+            <img data-aos="fade-down" src="../images/hitandboom.png" alt="Hit And Boom">
+        </div>
+        <div data-aos="fade-down" class="footer-text">
+            <div class="footer-link">
+                <a target="_blank" href="https://store.steampowered.com/app/2024080/Hit_and_Boom/">Steam</a>
+                <a target="_blank" href="https://store.epicgames.com/tr/p/hit-and-boom-d8bacd">Epic Games</a>
+                <a href="#">İletişim</a>
+            </div>
+            <p data-aos="fade-down">
+                Hit and Boom ve Hit and Boom logosu Funverse Games’in ticari ve/veya tescilli markalarıdır.<br>2023
+                Funverse Games, tüm hakları saklıdır.
+            </p>
+        </div>
+        <div data-aos="fade-down" class="footer-icon">
+            <a target="_blank" href="https://www.instagram.com/hitandboom/"><img src="../images/icon/instagram.png"
+                    alt="Hit And Boom Instagram"></a>
+            <a target="_blank" href="https://www.facebook.com/hitandboom/"><img src="../images/icon/facebook.png"
+                    alt="Hit And Boom Facebook"></i></a>
+            <a target="_blank" href="https://www.youtube.com/@funversegames"><img src="../images/icon/youtube.png"
+                    alt="Hit And Boom Youtube"></i></a>
+            <a target="_blank" href="https://mobile.twitter.com/hitandboom"><img src="../images/icon/twitter.png"
+                    alt="Hit And Boom Twitter"></i></a>
+        </div>
+    </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>

@@ -140,6 +140,7 @@ section {
     font-size: 0.75rem;
 }
 
+
 .left-side a {
     text-decoration: none;
 }
@@ -357,15 +358,15 @@ section {
 .area-2-section {
     display: flex;
     flex-direction: row;
-    padding: 0 200px;
     position: absolute;
     bottom: 0;
     right: 0;
+    top: 0;
+    left: 0;
 }
 
 .area-2-img {
-    display: flex;
-    flex: 0 0 70%;
+    padding: 100px 200px;
 }
 
 .area-2-img img {
@@ -1018,16 +1019,22 @@ input[type="checkbox"]:checked + label:before {
     gap: 2rem;
 }
 
-.blog-list input{
+.blog-list-button{
     background: none;
     border:none;
     color: #fff;
     font-size: 1.5rem;
     margin: 0 .5rem;
     cursor: pointer;
+    transition: 0.3s;
 }
-
-.blog-list input:hover{
+.tab-content {
+    display: none;
+    border-top: none;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+.blog-list-button:hover{
     color: #EFB35A;
 }
 
@@ -1076,7 +1083,7 @@ input[type="checkbox"]:checked + label:before {
 
     .area-2-rv {
         top: 3rem;
-    }
+    }   
 
     .haber-blog {
         padding: 100px 200px;
