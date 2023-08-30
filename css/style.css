@@ -93,7 +93,7 @@ section {
     background: url("../images/background.jpg");
     background-size: cover;
     background-position: center;
-    /* scroll-snap-align: start; */
+    scroll-snap-align: start;
 }
 
 .home-area {
