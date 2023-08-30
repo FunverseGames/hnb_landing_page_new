@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <meta http-equiv="refresh" content="0; url='https://hitandboom.com/register'" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js"></script>
+    <title>Hit and Boom</title>
+</head>
+
+<body>
+
+    <a class="up" href="#kayit">
+        <img src="images/icon/up.png" alt="">
+        <span>Yukarı Çık</span>
+    </a>
+    <header>
+        <a data-aos="fade-up" href="index.html" class="brand"><img src="images/hitandboom.png" alt="Hit And Boom"></a>
+        <div class="menu-btn"></div>
+        <div class="navigation">
+            <div data-aos="fade-up" class="navigation-items">
+                <a href="index.html#oyun">Oyun</a>
+                <a href="karakterler.html">Karakterler</a>
+                <a href="haberler/index.html">Haberler</a>
+                <a class="color-main" href="register.html">Kayıt Ol</a>
+                <a class="dropdown" onclick="menu()" href="#">TR <i class="menu-icon bi bi-chevron-down"></i></a>
+                <ul class="responsive-menu">
+                    <li>TR</li>
+                    <li>EN</li>
+                </ul>
+                <a href="register.html" class="border-btn">HEMEN OYNA</a>
+            </div>
+            <div class="lang-menu menu-disabled">
+                <ul>
+                    <li>TR</li>
+                    <li>EN</li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <div id="kayit" class="kayit-ol">
+        <div class="kayit-header">
+            <h1 data-aos="fade-up">HIT AND BOOM ARENASINA KATIL!</h1>
+        </div>
+        <div class="kayit-form">
+            <form action="" id="registerForm" class="email-input">
+                <input data-aos="fade-up" class="email" autofocus id="email" name="email"
+                    placeholder="E-Postanızı girin" type="email" required>
+                <div data-aos="fade-up" class="input-box">
+                    <input type="checkbox" id="box-1">
+                    <label for="box-1">Eposta yoluyla haber ve promosyon teklifleri almayı kabul ediyorum.</label>
+                </div>
+                <div data-aos="fade-up" class="input-box">
+                    <input type="checkbox" id="box-2">
+                    <label for="box-2">Kişisel bilgilerimin <a href="https://hitandboom.com/policy/Privacy_Policy.pdf"
+                            target="_blank">Gizlilik
+                            Politikası</a>'na uygun olarak işleneceğini kabul ve beyan
+                        ediyorum.</label>
+                </div>
+                <button id="submit-button" type="submit" data-aos="fade-up" class="kayit-btn">BAŞLA</button>
+                <div id="loader" class="loader"></div>
+                <div id="form-feedback" class="form-feedback">
+                    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                    <p id="form-feedback-message"></p>
+                </div>
+                <a data-aos="fade-up" class="steam-hover" target="_blank"
+                    href="https://store.steampowered.com/app/2024080/Hit_and_Boom/">
+                    <div class="kayit-steam-btn">
+                        <div class="steam-logo">
+                            <img src="images/icon/steam.png" alt="">
+                        </div>
+                        <div class="steam-text">
+                            <p>ÜCRETSİZ OYNA</p>
+                            <p>STEAM’DEN İNDİRİN</p>
+                        </div>
+                    </div>
+                </a>
+            </form>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <div class="footer-logo">
+            <img data-aos="fade-right" src="images/hitandboom.png" alt="Hit And Boom">
+        </div>
+        <div class="footer-text">
+            <div data-aos="fade-up" class="footer-link">
+                <a target="_blank" href="https://store.steampowered.com/app/2024080/Hit_and_Boom/">Steam</a>
+                <a target="_blank" href="https://store.epicgames.com/tr/p/hit-and-boom-d8bacd">Epic Games</a>
+                <a href="#">İletişim</a>
+            </div>
+            <p data-aos="fade-down">
+                Hit and Boom ve Hit and Boom logosu Funverse Games’in ticari ve/veya tescilli markalarıdır.<br>2023
+                Funverse Games, tüm hakları saklıdır.
+            </p>
+        </div>
+        <div data-aos="fade-left" class="footer-icon">
+            <a target="_blank" href="https://www.instagram.com/hitandboom/"><img src="images/icon/instagram.png"
+                    alt="Hit And Boom Instagram"></a>
+            <a target="_blank" href="https://www.facebook.com/hitandboom/"><img src="images/icon/facebook.png"
+                    alt="Hit And Boom Facebook"></i></a>
+            <a target="_blank" href="https://www.youtube.com/@funversegames"><img src="images/icon/youtube.png"
+                    alt="Hit And Boom Youtube"></i></a>
+            <a target="_blank" href="https://mobile.twitter.com/hitandboom"><img src="images/icon/twitter.png"
+                    alt="Hit And Boom Twitter"></i></a>
+        </div>
+    </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="js/main.js"></script>
+    <script defer src="js/registerForm.js"></script>
+</body>
+
+</html>
