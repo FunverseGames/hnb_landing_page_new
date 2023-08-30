@@ -1490,6 +1490,9 @@ input[type="checkbox"]:checked + label:before {
 }
 
 @media (max-width: 330px) {
+    .area-2{
+        display: none;
+    }
     .middle-image {
         top: 8rem;
     }
