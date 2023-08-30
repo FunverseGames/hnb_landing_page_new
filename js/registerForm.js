@@ -48,7 +48,7 @@ registerForm.addEventListener("submit", async (e) => {
         receive: acceptReceive
     }
 
-    const url = "https://hitandboom.com/api/register"
+    const url = "https://old-hitandboom.vercel.app/api/register"
     loader.style.display = "block"
     formFeedback.style.display = "none";
     submitButton.style.display = "none"
