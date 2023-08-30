@@ -1139,6 +1139,9 @@ input[type="checkbox"]:checked + label:before {
 }
 
 @media (max-width: 1200px) {
+    .area-2{
+        display: none;
+    }
     header .navigation .navigation-items a {
         font-size: 0.8rem;
     }
@@ -1369,9 +1372,6 @@ input[type="checkbox"]:checked + label:before {
 }
 
 @media (max-width: 768px) {
-    .area-2{
-        display: none;
-    }
     .home-area {
         flex-direction: column;
     }
