@@ -406,7 +406,7 @@ section {
     color: #fff;
     display: flex;
     justify-content: space-between;
-    scroll-snap-align: start;
+    /* scroll-snap-align: start; */
 }
 
 .footer-detay {
