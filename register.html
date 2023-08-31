@@ -11,11 +11,34 @@
     <title>Hit and Boom</title>
     <link rel="icon" type="image/x-icon" href="/images/site_icon.png">
 </head>
+<script>
+    var queryForm = function (settings) {
+        var reset = settings && settings.reset ? settings.reset : false;
+        var self = window.location.toString();
+        var querystring = self.split("?");
+        if (querystring.length > 1) {
+            var pairs = querystring[1].split("&");
+            for (i in pairs) {
+                var keyval = pairs[i].split("=");
+                if (reset || sessionStorage.getItem(keyval[0]) === null) {
+                    sessionStorage.setItem(keyval[0], decodeURIComponent(keyval[1]));
+                }
+            }
+        }
+        var hiddenFields = document.querySelectorAll("input[type=hidden], input[type=text]");
+        for (var i = 0; i < hiddenFields.length; i++) {
+            var param = sessionStorage.getItem(hiddenFields[i].name);
+            if (param) document.getElementsByName(hiddenFields[i].name)[0].value = param;
+        }
+    }
+
+    setTimeout(function () { queryForm({reset:true}); }, 1000);
+</script>
 
 <body>
 
     <a class="up" href="#kayit">
-        <img  src="images/icon/up.png" alt="">
+        <img src="images/icon/up.png" alt="">
         <span>Yukarı Çık</span>
     </a>
     <header>
@@ -48,9 +71,9 @@
             <h1 data-aos="fade-up">HIT AND BOOM ARENASINA KATIL!</h1>
         </div>
         <div class="kayit-form">
-            <form action="" id="registerForm" class="email-input">
-                <input data-aos="fade-up" class="email" autofocus id="email" name="email" placeholder="E-Postanızı girin" type="email"
-                    required>
+            <form action="" id="registerForm" class="email-input" enctype="text/plain">
+                <input data-aos="fade-up" class="email" autofocus id="email" name="email"
+                    placeholder="E-Postanızı girin" type="email" required>
                 <div data-aos="fade-up" class="input-box">
                     <input type="checkbox" id="box-1">
                     <label for="box-1">Eposta yoluyla haber ve promosyon teklifleri almayı kabul ediyorum.</label>
@@ -62,13 +85,20 @@
                             Politikası</a>'na uygun olarak işleneceğini kabul ve beyan
                         ediyorum.</label>
                 </div>
+                <input type="hidden" id="utm_id" name="utm_id" value="">
+                <input type="hidden" id="utm_source" name="utm_source" value="">
+                <input type="hidden" id="utm_medium" name="utm_medium" value="">
+                <input type="hidden" id="utm_campaign" name="utm_campaign" value="">
+                <input type="hidden" id="utm_term" name="utm_term" value="">
+                <input type="hidden" id="utm_content" name="utm_content" value="">
                 <button id="submit-button" type="submit" data-aos="fade-up" class="kayit-btn">BAŞLA</button>
                 <div id="loader" class="loader"></div>
                 <div id="form-feedback" class="form-feedback">
-                    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+                    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
                     <p id="form-feedback-message"></p>
                 </div>
-                <a data-aos="fade-up" class="steam-hover" target="_blank" href="https://store.steampowered.com/app/2024080/Hit_and_Boom/">
+                <a data-aos="fade-up" class="steam-hover" target="_blank"
+                    href="https://store.steampowered.com/app/2024080/Hit_and_Boom/">
                     <div class="kayit-steam-btn">
                         <div class="steam-logo">
                             <img src="images/icon/steam.png" alt="">
@@ -100,10 +130,14 @@
             </p>
         </div>
         <div data-aos="fade-left" class="footer-icon">
-            <a target="_blank" href="https://www.instagram.com/hitandboom/"><img src="images/icon/instagram.png" alt="Hit And Boom Instagram"></a>
-            <a target="_blank" href="https://www.facebook.com/hitandboom/"><img src="images/icon/facebook.png" alt="Hit And Boom Facebook"></i></a>
-            <a target="_blank" href="https://www.youtube.com/@funversegames"><img src="images/icon/youtube.png" alt="Hit And Boom Youtube"></i></a>
-            <a target="_blank" href="https://mobile.twitter.com/hitandboom"><img src="images/icon/twitter.png" alt="Hit And Boom Twitter"></i></a>
+            <a target="_blank" href="https://www.instagram.com/hitandboom/"><img src="images/icon/instagram.png"
+                    alt="Hit And Boom Instagram"></a>
+            <a target="_blank" href="https://www.facebook.com/hitandboom/"><img src="images/icon/facebook.png"
+                    alt="Hit And Boom Facebook"></i></a>
+            <a target="_blank" href="https://www.youtube.com/@funversegames"><img src="images/icon/youtube.png"
+                    alt="Hit And Boom Youtube"></i></a>
+            <a target="_blank" href="https://mobile.twitter.com/hitandboom"><img src="images/icon/twitter.png"
+                    alt="Hit And Boom Twitter"></i></a>
         </div>
     </div>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
